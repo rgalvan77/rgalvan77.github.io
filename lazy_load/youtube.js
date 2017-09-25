@@ -1,4 +1,4 @@
-( function() {
+( function youtube_load() {
 
 	var youtube = document.querySelectorAll( ".youtube" );
 

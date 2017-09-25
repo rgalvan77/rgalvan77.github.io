@@ -6,6 +6,8 @@
 <link rel="stylesheet" href="/css/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Work+Sans" rel="stylesheet">
+<link rel="stylesheet lazy load youtube embed" href="lazy_load/youtube.css">
+<script type="text/javascript" src="lazy_load/youtube.js" async></script>
 <style>
 body,h1,h4,h6 {font-family:'Work Sans', sans-serif;}
 h1 {letter-spacing: 6px}
@@ -71,19 +73,33 @@ h1 {letter-spacing: 6px}
 <!-- reels -->
 <div class="w3-row-padding" style="margin-bottom:64px">
   
-  <div class="w3-half w3-center">
+<div class="w3-half w3-center">
     <h4 class="w3-panel w3-padding-16 w3-center w3-opacity">Directing Reel</h4>
     
-      <iframe style="width:100%" width="560" height="315" src="https://www.youtube.com/embed/k7OnKNz5FNQ" frameborder="0" allowfullscreen></iframe>
+    <!-- (1) video wrapper -->
+    <div class="youtube" data-embed="k7OnKNz5FNQ"> 
+      <!-- (2) the "play" button -->
+      <div class="play-button"></div> 
+      <script> youtube_load(i);</script>
+    </div>
+    <!-- end video wraper -->
       
-  
   </div>
-  <div class="w3-half w3-center">   
+
+<div class="w3-half w3-center">
     <h4 class="w3-panel w3-padding-16 w3-center w3-opacity">Cinematography Reel</h4>
     
-      <iframe style="width:100%" width="560" height="315" src="https://www.youtube.com/embed/ggbnmocybk0" frameborder="0" allowfullscreen></iframe>
-    
-  </div>
+    <!-- (1) video wrapper -->
+    <div class="youtube" data-embed="ggbnmocybk0"> 
+      <!-- (2) the "play" button -->
+      <div class="play-button"></div> 
+      <script> youtube_load(i);</script>
+    </div>
+    <!-- end video wraper -->      
+
+</div>
+
+
 </div>
 
 

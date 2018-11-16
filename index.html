@@ -43,11 +43,21 @@ h1 {letter-spacing: 6px}
 
 <div class="w3-row-padding" style="margin-bottom:64px">
   <div class="w3-center">
-    <h4 class="w3-panel w3-padding-16 w3-center w3-opacity"></h4>
+    
 
-  
+    <div>
+      <form method="post" name="contact_form" action="contact-form-handler.php">
+          <label for="name">name:</label>
+          <input type="text" name="name">
+          <label for="email">email:</label>
+          <input type="text" name="email">
+          <label for="message">message:</label>
+          <textarea name="message"></textarea>
+          
+          <input type="submit" name="send" value="Submit">
+      </form> 
 
-
+    </div>
 
 
 

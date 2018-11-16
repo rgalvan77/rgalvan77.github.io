@@ -47,32 +47,10 @@ h1 {letter-spacing: 6px}
     
 
     <div class="w3-center">
-      <h5 class="w3-panel w3-padding-4 w3-center w3-opacity">Send Ramon a message:</h5>
-        <form method="POST" name="contactform" action="/contact-form-handler.php"> 
-        <p>
-        <label for='name'>Name:</label> <br>
-        <input type="text" name="name">
-        </p>
-        <p>
-        <label for='email'>Email Address:</label> <br>
-        <input type="text" name="email"> <br>
-        </p>
-        <p>
-        <label for='message'>Message:</label> <br>
-        <textarea name="message"></textarea>
-        </p>
-        <input type="submit" value="Submit"><br>
-        </form>
-
-        <script language="JavaScript">
-        // Code for validating the form
-        // Visit http://www.javascript-coder.com/html-form/javascript-form-validation.phtml
-        // for details
-        var frmvalidator  = new Validator("contactform");
-        frmvalidator.addValidation("name","req","Please provide your name"); 
-        frmvalidator.addValidation("email","req","Please provide your email"); 
-        frmvalidator.addValidation("email","email","Please enter a valid email address"); 
-        </script>
+      <h5 class="w3-panel w3-padding-4 w3-center w3-opacity">About</h5>
+      <h6 class="w3-panel w3-padding-4 w3-center w3-opacity">Raised in Texas, graduate of Harvard University, lives in the U.S.</h6>
+      <h6 class="w3-panel w3-padding-4 w3-center w3-opacity">e: rgalvan1617@gmail.com</h6>
+      
 
     </div>
 
@@ -82,7 +60,7 @@ h1 {letter-spacing: 6px}
     <!--main video link -->
     <h5 class="w3-panel w3-padding-4 w3-center w3-opacity">Selected Works (2016 - 2018)</h5>
     <!-- (1) video wrapper -->
-    <div class="youtube" data-embed="GOXe4Ohzq-M"> 
+    <div class="youtube" "w3-twothird" data-embed="GOXe4Ohzq-M"> 
       <!-- (2) the "play" button -->
       <div class="play-button"></div> 
       <script> youtube_load(i);</script>

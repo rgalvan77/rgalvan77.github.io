@@ -39,8 +39,8 @@
 }
 .youtube .play-button,
 .youtube .play-button:before {
-    top: 10%;
-    left: 10%;
+    top: 50%;
+    left: 50%;
     transform: translate3d( -50%, -50%, 0 );
 }
 .youtube iframe {

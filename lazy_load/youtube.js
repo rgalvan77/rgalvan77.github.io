@@ -4,7 +4,7 @@
 
 	for (var i = 0; i < youtube.length; i++) {
 	    // thumbnail image source.
-	    var source = "https://i3.ytimg.com/vi/"+ youtube[i].dataset.embed +"/mqdefault.jpg";
+	    var source = "https://i3.ytimg.com/vi/"+ youtube[i].dataset.embed +"/maxresdefault.jpg";
 
 	    // Load the image asynchronously
 	    var image = new Image();

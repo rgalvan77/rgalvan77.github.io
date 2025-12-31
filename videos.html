@@ -11,6 +11,49 @@
       font-family: 'Work Sans', sans-serif;
       margin: 0;
       padding: 0;
+      position: relative;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* --- Cinematic vignette overlay --- */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background: radial-gradient(circle, rgba(203,213,192,0) 60%, rgba(0,0,0,0.2) 100%);
+      z-index: 0;
+    }
+
+    /* --- Projector flicker overlay --- */
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background: rgba(255,255,255,0.02);
+      z-index: 1;
+      animation: flicker 3s infinite;
+    }
+
+    @keyframes flicker {
+      0%, 100% { opacity: 0.02; }
+      10% { opacity: 0.04; }
+      20% { opacity: 0.015; }
+      30% { opacity: 0.03; }
+      40% { opacity: 0.02; }
+      50% { opacity: 0.035; }
+      60% { opacity: 0.025; }
+      70% { opacity: 0.03; }
+      80% { opacity: 0.02; }
+      90% { opacity: 0.04; }
     }
 
     nav {
@@ -19,6 +62,8 @@
       justify-content: space-between;
       align-items: center;
       background: transparent;
+      position: relative;
+      z-index: 2;
     }
 
     nav ul {
@@ -37,6 +82,8 @@
 
     main.content {
       padding: 2rem;
+      position: relative;
+      z-index: 2;
     }
 
     h2 {
@@ -47,12 +94,24 @@
 
     /* --- Fade-in animation --- */
     @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
+
     iframe {
+      opacity: 0;
       animation: fadeIn 1s ease forwards;
     }
+
+    /* Staggered fade-ins for grid videos */
+    .video-grid iframe:nth-child(1) { animation-delay: 0.1s; }
+    .video-grid iframe:nth-child(2) { animation-delay: 0.2s; }
+    .video-grid iframe:nth-child(3) { animation-delay: 0.3s; }
+    .video-grid iframe:nth-child(4) { animation-delay: 0.4s; }
+    .video-grid iframe:nth-child(5) { animation-delay: 0.5s; }
+    .video-grid iframe:nth-child(6) { animation-delay: 0.6s; }
+    .video-grid iframe:nth-child(7) { animation-delay: 0.7s; }
+    .video-grid iframe:nth-child(8) { animation-delay: 0.8s; }
 
     /* --- Featured Videos --- */
     .featured-video {
@@ -73,10 +132,11 @@
       border-radius: 6px;
       display: block;
       transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+      animation-delay: 0.05s;
     }
 
     .featured-video iframe:hover {
-      transform: scale(1.025) rotateZ(0.2deg);
+      transform: scale(1.05) rotateZ(0.2deg);
       box-shadow: 0 30px 60px rgba(0,0,0,0.45), 0 0 25px rgba(75,46,43,0.25) inset;
     }
 
@@ -100,7 +160,7 @@
     }
 
     .video-grid iframe:hover {
-      transform: scale(1.03) rotateZ(0.1deg);
+      transform: scale(1.05) rotateZ(0.1deg);
       box-shadow: 0 20px 40px rgba(0,0,0,0.35), 0 0 15px rgba(75,46,43,0.15) inset;
     }
 

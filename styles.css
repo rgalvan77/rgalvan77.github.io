@@ -162,19 +162,15 @@ iframe {
   letter-spacing: 0.1em;
 }
 
-/* --- Page Transitions --- */
+/* Page transitions — SAFE VERSION */
 
 #page {
-  opacity: 0;
-}
-
-.fade-in {
-  opacity: 1;
-  transition: opacity 0.35s ease;
+  opacity: 1; /* visible by default */
 }
 
 .fade-out {
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.25s ease;
 }
+
 

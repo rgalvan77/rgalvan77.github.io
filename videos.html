@@ -1,54 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Videos | Ramón Galván</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* Video Page Specific CSS */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .video-grid iframe, .featured-video iframe {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: none;
+    }
+
+    .featured-video {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .featured-video iframe {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: block;
+    }
+  </style>
 </head>
 <body>
-  <div id="page">
-    <!-- everything else stays the same -->
-    <nav>
-      <h1>Ramón Galván</h1>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="videos.html">Videos</a></li>
-        <li><a href="photos.html">Photos</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+  <nav>
+    <h1>Ramón Galván</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="photos.html">Photos</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
   <main class="content">
-    <h2>Videos</h2>
-    
+    <h2>Featured Videos</h2>
     <div class="featured-video">
-      <iframe src="https://www.youtube.com/embed/MHQs31Cw1Wk" loading="lazy" allowfullscreen title="Video 1"</iframe>
+      <iframe src="https://www.youtube.com/embed/MHQs31Cw1Wk" allowfullscreen title="Featured Video 1" loading="lazy"></iframe>
+      <iframe src="https://www.youtube.com/embed/VUYeGqphRYI" allowfullscreen title="Featured Video 2" loading="lazy"></iframe>
     </div>
-    
+
+    <h2>All Videos</h2>
     <div class="video-grid">
-      <!-- Replace VIDEO_IDs -->
-      <iframe src="https://www.youtube.com/embed/VUYeGqphRYI" loading="lazy" allowfullscreen title="Video 2"></iframe>
-      <iframe src="https://www.youtube.com/embed/zVRgjcxE0Ns" loading="lazy" allowfullscreen title="Video 3"</iframe>
-      <iframe src="https://www.youtube.com/embed/DKc3Bbid0bQ" loading="lazy" allowfullscreen title="Video 4"</iframe>
-      <iframe src="https://www.youtube.com/embed/UAYgk5JESWc" loading="lazy" allowfullscreen title="Video 5"</iframe>
-      <iframe src="https://www.youtube.com/embed/P5wtLyqrcO4" loading="lazy" allowfullscreen title="Video 6"</iframe>
-      <iframe src="https://www.youtube.com/embed/E5el_dGykeM" loading="lazy" allowfullscreen title="Video 7"</iframe>
-      <iframe src="https://www.youtube.com/embed/WHcgVxTYIyc" loading="lazy" allowfullscreen title="Video 8"</iframe>
-      <iframe src="https://www.youtube.com/embed/NZxALvNlF-8" loading="lazy" allowfullscreen title="Video 9"</iframe>
-      <iframe src="https://www.youtube.com/embed/MOqdDUbGBVA" loading="lazy" allowfullscreen title="Video 10"</iframe>
-      <iframe src="https://www.youtube.com/embed/MOqdDUbGBVA" loading="lazy" title="Why This Texas Man Drives Over a Thousand Miles Every Weekend | PBS Short Docs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
+      <iframe src="https://www.youtube.com/embed/DKc3Bbid0bQ" allowfullscreen title="Video 3" loading="lazy"></iframe>
+      <iframe src="https://www.youtube.com/embed/P5wtLyqrcO4" allowfullscreen title="Video 4" loading="lazy"></iframe>
+      <iframe src="https://www.youtube.com/embed/E5el_dGykeM" allowfullscreen title="Video 5" loading="lazy"></iframe>
+      <iframe src="https://www.youtube.com/embed/WHcgVxTYIyc" allowfullscreen title="Video 6" loading="lazy"></iframe>
+      <iframe src="https://www.youtube.com/embed/NZxALvNlF-8" allowfullscreen title="Video 7" loading="lazy"></iframe>
+      <iframe src="https://www.youtube.com/embed/MOqdDUbGBVA" allowfullscreen title="Video 8" loading="lazy"></iframe>
+      <iframe src="https://www.youtube.com/embed/MOqdDUbGBVA" allowfullscreen title="Video 9" loading="lazy"></iframe>
     </div>
   </main>
-    
-  </div>
-
-  <script src="transitions.js"></script>
-</body>
-
-
-
-  
-  
 </body>
 </html>

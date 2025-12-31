@@ -173,16 +173,17 @@ iframe {
   transition: opacity 0.25s ease;
 }
 
-/* Safe fade-in — runs once on page load */
+/* Cinematic fade-in — slow, smooth, filmic */
 #page {
   opacity: 1;
-  animation: fadeInOnce 0.5s ease forwards;
+  animation: fadeInCinematic 1s ease-in-out forwards; /* 1s = slow & cinematic */
 }
 
-@keyframes fadeInOnce {
+@keyframes fadeInCinematic {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
 
 
 

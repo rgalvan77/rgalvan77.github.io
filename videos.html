@@ -6,31 +6,48 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
-    /* Video Page Specific CSS */
-    .video-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .video-grid iframe, .featured-video iframe {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      border: none;
-    }
-
+    /* --- Featured Videos --- */
     .featured-video {
       display: grid;
       grid-template-columns: 1fr;
       gap: 2rem;
       margin-bottom: 3rem;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .featured-video iframe {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      display: block;
+      border: none;
     }
 
-    .featured-video iframe {
-      max-width: 1200px;
-      margin: 0 auto;
+    /* --- Video Grid Layout --- */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* 2 per row on desktop */
+      gap: 2rem;
+      max-width: 1000px; /* keeps left/right borders */
+      margin: 0 auto 3rem auto; /* centers horizontally */
+    }
+    .video-grid iframe {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: none;
       display: block;
+      transition: transform 0.3s ease-in-out; /* cinematic hover effect */
+    }
+    .video-grid iframe:hover {
+      transform: scale(1.03); /* subtle zoom on hover */
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 900px) {
+      .video-grid {
+        grid-template-columns: 1fr; /* 1 per row on tablet/mobile */
+        max-width: 90%;
+      }
     }
   </style>
 </head>
@@ -61,7 +78,7 @@
       <iframe src="https://www.youtube.com/embed/WHcgVxTYIyc" allowfullscreen title="Video 6" loading="lazy"></iframe>
       <iframe src="https://www.youtube.com/embed/NZxALvNlF-8" allowfullscreen title="Video 7" loading="lazy"></iframe>
       <iframe src="https://www.youtube.com/embed/MOqdDUbGBVA" allowfullscreen title="Video 8" loading="lazy"></iframe>
-      <iframe src="https://www.youtube.com/embed/MOqdDUbGBVA" allowfullscreen title="Video 9" loading="lazy"></iframe>
+      <iframe width="618" height="1099" src="https://www.youtube.com/embed/IZlC3zuywPg" loading="lazy" title="Boston Public Schools&#39; Thomas Simmons Named 2026 Massachusetts Teacher of the Year Award Finalist!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
   </main>
 </body>

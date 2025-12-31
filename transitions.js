@@ -19,6 +19,6 @@ document.querySelectorAll("a[href]").forEach(link => {
 
     setTimeout(() => {
       window.location.href = href;
-    }, 250);
+    }, 600);
   });
 });

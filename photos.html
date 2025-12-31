@@ -31,11 +31,13 @@
   </main>
 
   <div id="lightbox">
-    <span onclick="closeGallery()">✕</span>
-    <img id="lightbox-img">
-    <button onclick="prev()">←</button>
-    <button onclick="next()">→</button>
+    <span class="close" onclick="closeGallery()">✕</span>
+    <img id="lightbox-img" class="fade-in" loading="lazy">
+    <div id="counter"></div>
+    <button class="nav left" onclick="prev()">←</button>
+    <button class="nav right" onclick="next()">→</button>
   </div>
+
 
   <script src="gallery.js"></script>
 </body>

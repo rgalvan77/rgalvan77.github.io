@@ -162,16 +162,6 @@ iframe {
   letter-spacing: 0.1em;
 }
 
-/* Page transitions — SAFE VERSION */
-
-#page {
-  opacity: 1; /* visible by default */
-}
-
-.fade-out {
-  opacity: 0;
-  transition: opacity 0.25s ease;
-}
 
 /* Cinematic fade-in — slow, smooth, filmic */
 #page {
@@ -183,6 +173,12 @@ iframe {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out; /* match the cinematic feel */
+}
+
 
 
 

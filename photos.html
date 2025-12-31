@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Photos | Ramón Galván</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav>
+    <h1>Ramón Galván</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="photos.html">Photos</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="content">
+    <h2>Photos</h2>
+
+    <div class="album-grid">
+      <!-- Example album -->
+      <div class="album" onclick="openGallery(['img1.jpg','img2.jpg','img3.jpg'])">
+        <img src="cover1.jpg" alt="Album">
+        <p>Album Title</p>
+      </div>
+      <!-- Duplicate for 12+ albums -->
+    </div>
+  </main>
+
+  <div id="lightbox">
+    <span onclick="closeGallery()">✕</span>
+    <img id="lightbox-img">
+    <button onclick="prev()">←</button>
+    <button onclick="next()">→</button>
+  </div>
+
+  <script src="gallery.js"></script>
+</body>
+</html>

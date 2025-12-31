@@ -6,18 +6,9 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav>
-    <h1>Ramón Galván</h1>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="videos.html">Videos</a></li>
-      <li><a href="photos.html">Photos</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
-  <main class="content">
+  <div id="page">
+    <!-- everything else stays the same -->
+    <main class="content">
     <h2>Photos</h2>
 
     <div class="album-grid">
@@ -39,9 +30,9 @@
                 'album1/photo8.jpg'
               ])">
           <img src="album1/cover.jpg" loading="lazy">
->
-  <p>Album Title</p>
-</div>
+
+          <p>Album Title</p>
+      </div>
 
     </div>
   </main>
@@ -56,5 +47,8 @@
 
 
   <script src="gallery.js"></script>
+  </div>
+
+  <script src="transitions.js"></script>
 </body>
 </html>

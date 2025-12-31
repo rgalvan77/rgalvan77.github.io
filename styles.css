@@ -180,6 +180,15 @@ nav a {
   transition: opacity 0.6s ease-in-out; /* match the cinematic feel */
 }
 
+.featured-video iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-width: 1200px; /* optional, keeps it centered */
+  margin: 2rem auto;
+  display: block;
+}
+
+
 
 
 
